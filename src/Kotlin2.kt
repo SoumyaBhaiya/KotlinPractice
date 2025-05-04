@@ -18,6 +18,7 @@ fun main() {
 }
  */
 
+
 fun main(){
     // using when now. instead of if and else
 
@@ -26,6 +27,15 @@ fun main(){
         null -> println("Hi")
         else -> println("Greeting")
 
-
     }
+    val greetingToPrint = if(Greeting != null) Greeting else "HIII" // Greeting is Hello (declared above, so it won't print HIII)
+    println(greetingToPrint)
+
+    // can also use a when block inside the variable
+    val gretoPrint = when(Greeting){
+        null -> "Hii"
+        else -> Greeting
+    }
+    println(gretoPrint)
 }
+
