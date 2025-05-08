@@ -17,4 +17,21 @@ fun main() {
         println(it)
     } //think of 'it' as just another i where we are storing the values in the array
 
+    val maxIntegerValue: Int = Int.MAX_VALUE
+    val minIntegerValue: Int = Int.MIN_VALUE
+
+    println("maximum value of integer is: $maxIntegerValue")
+    println("minimum value of integer is: $minIntegerValue")
+
+    val anotherArray = arrayOf("Dice", "Rubber", "Pencil", "Table", "Chair")
+
+    if ("Dice" in anotherArray){
+        println("Yes")
+    }
+
+    anotherArray.forEachIndexed {index, i ->
+        println("This item: $i is in this index: $index")
+    }
+
+
 }
