@@ -32,6 +32,39 @@ fun main() {
     anotherArray.forEachIndexed {index, i ->
         println("This item: $i is in this index: $index")
     }
+    println(interestingThings.get(1))
 
+// Similarly you can also use listOf instead of arrayOf to create lists
+
+    //Another collection type: Maps
+
+    val map = mapOf(1 to "a", 2 to "b", 3 to "c") //it's like a key value pair
+    map.forEach { key, value ->
+        println("This is key: $key, this is value: $value")
+    }
+
+    // By default the collection type in python is IMMUTABLE
+
+    //if we want mutable list, we need to use mutableListOf, mutableMapOf
+
+
+    //Examples:
+
+    val mutablelist = mutableListOf("Car", "Cat", "Dog")
+    // now adding the value
+    mutablelist.add("Here goes another value")
+    println(mutablelist)
+    println(mutablelist.forEach { i -> println(i) })
+
+    //now mutables maps
+
+    val mutablemaps = mutableMapOf("A" to 1, "B" to 2, "C" to 3)
+
+    mutablemaps.put(key = "D", value = 4)
+
+    println(mutablemaps)
+    println(mutablemaps.forEach{index, value ->
+        println("Index $index, value $value")
+    })
 
 }
