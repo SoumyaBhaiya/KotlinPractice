@@ -1,5 +1,16 @@
 // Kotlin as collection data types, which are lists, arrays, maps
 
+
+fun aSimpleGreet(greet: String, items: List<String>){
+    items.forEach { item ->
+        println("$greet, $item")
+    }
+}
+
+
+// A Simple vararg use.
+
+
 fun main() {
     val interestingThings = arrayOf("Kotlin", "Programming", "Books")
 
@@ -67,4 +78,6 @@ fun main() {
         println("Index $index, value $value")
     })
 
+    aSimpleGreet("Hey", mutablelist)
 }
+
