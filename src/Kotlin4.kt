@@ -11,6 +11,14 @@ fun aSimpleGreet(greet: String, items: List<String>){
 // A Simple vararg use.
 
 
+fun greetNames(greet: String, vararg names:String){
+    names.forEach { name ->
+        println("$greet $name, How are you doing today?")
+    }
+}
+
+
+
 fun main() {
     val interestingThings = arrayOf("Kotlin", "Programming", "Books")
 
@@ -79,5 +87,10 @@ fun main() {
     })
 
     aSimpleGreet("Hey", mutablelist)
+
+    greetNames("Hello", "Cindy", "Melani")
+    greetNames("Hey", *interestingThings) // now the thing with vararg is you won't be able to pass
+    //an array cause its only taking strings now. so to change that you need to add '*' and variable.
+
 }
 
