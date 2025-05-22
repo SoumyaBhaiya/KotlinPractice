@@ -20,5 +20,14 @@ fun main(){
         i++
     }
 
+    //Calling the Class Person here.
+
+    val person = Person("Nate", "Gregg")
+    person.lastName
+    person.firstName // see we can access the properties here.
+    println(person.lastName)
+
+
 }
-// gonna start with learning classes now.
+
+
