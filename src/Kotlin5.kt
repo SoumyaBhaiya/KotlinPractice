@@ -27,7 +27,7 @@ fun main(){
     person.firstName // see we can access the properties here.
     println(person.lastName)
     //continue?
-    
+
 
 }
 
