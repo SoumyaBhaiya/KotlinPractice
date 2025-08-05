@@ -7,7 +7,13 @@ fun main(){
 
 
 open class SmartDevice(val name: String, val category: String){
+    fun turnOn(){
+        println("Smart device has turned on")
+    }
 
+    fun turnOff(){
+        println("Smart device has turned off")
+    }
 }
 
 class SmartTvDevice(deviceName: String, deviceCategory: String): SmartDevice(name = deviceName, category = deviceCategory){
@@ -49,5 +55,14 @@ class SmartLightDevice(deviceName: String, deviceCategory: String) :
     fun increaseBrightness() {
         brightnessLevel++
         println("Brightness increased to $brightnessLevel.")
+    }
+}
+
+class SmartHome(val smartTvDevice: SmartTvDevice){
+    fun turnOnTv(){
+        smartTvDevice.turnOn()
+    }
+    fun turnOffTv(){
+        smartTvDevice.turnOff()
     }
 }
